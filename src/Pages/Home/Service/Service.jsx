@@ -5,9 +5,9 @@ import ServiceCard from "./ServiceCard";
 const Service = () => {
     const [services , setServires] = useState([]);
     useEffect(()=>{
-        fetch('service.json')
-        .then(res => res.json())
-        .then(data => setServires(data))
+        fetch("http://localhost:5000/services")
+          .then((res) => res.json())
+          .then((data) => setServires(data));
     },[])
   return (
     <div className="mt-12">
